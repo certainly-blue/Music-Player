@@ -82,3 +82,31 @@ progressContainer.addEventListener('click', setProgress);
 /* Auto-Play Next Song on End */
 
 audio.addEventListener('ended', nextSong);
+
+
+let x = 0;
+let y = 0;
+let dirX = 1;
+let dirY = 1;
+let hm = document.getElementById("hm");
+const speed = 3;
+
+function animate() {
+  const screenHeight = document.body.clientHeight;
+  const screenWidth = document.body.clientWidth;
+// when it bumps into the wall, *-1 makes it move the other way
+  if (y + 100 >= screenHeight || y < 0) {
+    dirY *= -1;
+  }
+  if (x + 520 >= screenWidth || x < 0) {
+    dirX *= -1;
+
+  }
+  x += dirX * speed;
+  y += dirY * speed;
+  hm.style.left = x + "px";
+  hm.style.top = y + "px";
+  window.requestAnimationFrame(animate);
+}
+
+window.requestAnimationFrame(animate);

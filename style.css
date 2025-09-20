@@ -4,30 +4,48 @@
   box-sizing: border-box;
 }
 
+
 body {
-  background: linear-gradient(0deg, #99b63a 24%, #ffff8f 92%);
+  background: linear-gradient(0deg, #99b63a 24%, #e6ff95 92%);
   font-family: 'Lato', sans-serif;
+  color: white;
   margin: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  overflow: hidden;
 }
 
 h1 {
-  margin-bottom: 20px;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 100px;
+  font-style: italic;
+  color: #eaffa7;
+
+
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 0;
+  margin: 0;
+  z-index: -2;
+  
 }
 
 .music-container {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 20px 20px rgba(105, 12, 133, 0.6);
+  background: #000000;
+  border-radius: 20px;
+  box-shadow: 0 30px 30px rgba(105, 12, 133, 0.9);
   display: flex;
   align-items: center;
   padding: 20px 30px;
   position: relative;
 }
+
+
 
 .img-container {
   width: 110px;
@@ -56,17 +74,17 @@ h1 {
 }
 
 .music-info {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgb(138, 60, 158);
   border-radius: 15px 15px 0 0;
   position: absolute;
   top: 0;
   left: 20px;
   width: calc(100% - 40px);
-  padding: 10px 10px 10px 150px;
+  padding: 10px 10px 10px 140px;
   opacity: 0;
   transform: translateY(0%);
-  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
-  z-index: 0;
+  transition: transform 5s ease-in, opacity 0.3s ease-in;
+  z-index: -1;
 }
 
 .music-container.play .music-info {
@@ -84,7 +102,7 @@ h1 {
 }
 
 .progress {
-  background: #fe8daa;
+  background: black;
   height: 100%;
   width: 0%;
   border-radius: 5px;
@@ -99,9 +117,9 @@ h1 {
 }
 
 .action-btn {
-  background: #fff;
+  background: #000000;
   border: none;
-  color: #dfdbdf;
+  color: #a859da;
   font-size: 20px;
   padding: 10px;
   margin: 0 20px;
@@ -110,5 +128,14 @@ h1 {
 
 .action-btn-big {
   font-size: 30px;
-  color: #cdc2d0;
+  color: #a153b6;
+}
+
+.featuring {
+    background: rgb(138, 60, 158);
+    padding: 15px;
+    border-radius: 20px;
+    padding-bottom: 50px;
+    padding-top:3dvb;
+
 }
